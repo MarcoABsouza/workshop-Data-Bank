@@ -38,30 +38,40 @@ Several queries were carried out to demonstrate the database's functionalities. 
 2. What is the total amount billed by the workshop in a given period?
 
 
-"""
+"
 
-"""
+	select sum(s.price_service) as total_faturado
+	from order_services as os
+	right join services as s on s.id_services = os.service_order;	
+
 
 3. What are the services most requested by customers?
 
+"
 
-"""
-
-    
-    
-"""
-
+	SELECT s.name_service, COUNT(*) AS Quantidade
+	FROM order_services os
+	right join services s ON os.service_order = s.id_services
+	GROUP BY s.name_service
+	ORDER BY Quantidade DESC;	
+ 
 4. Which employees performed the most services in the last month?
 
-"""
-
-   
-"""
+"
+	
+	select emp.name_employee, count(*) as quantidade_de_serviços
+	from employees emp
+	left join order_services as os on emp.id_employees = os.employee_service
+	group by emp.name_employee
+	order by quantidade_de_serviços;
+ 
 5. What are the current open work orders?
 
-"""
+"
 
-"""
+	select date_order as Data_Inicial_do_Serviço,status_order as Status_Serviço
+	from order_services
+	where status_order="Em andamento";
 
 These queries are just examples of how the database can be consulted to obtain useful information for managing e-commerce.
 
