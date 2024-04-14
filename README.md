@@ -29,9 +29,11 @@ Several queries were carried out to demonstrate the database's functionalities. 
 
 1.  how many customers the workshop has served so far?
 
-"""
-	
-"""
+"	
+
+	select count(c.id_client) as Clientes_Atendidos
+ 	from clients as c;	
+ 
 
 2. What is the total amount billed by the workshop in a given period?
 
