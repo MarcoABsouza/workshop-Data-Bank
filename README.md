@@ -30,17 +30,15 @@ Several queries were carried out to demonstrate the database's functionalities. 
 1.  how many customers the workshop has served so far?
 
 """
-	select count(c.id_client) as Clientes_Atendidos
-	from clients as c;
+	
 """
 
 2. What is the total amount billed by the workshop in a given period?
 
 
-select sum(s.price_service) as total_faturado
-from order_services as os
-right join services as s on s.id_services = os.service_order;
+"""
 
+"""
 
 3. What are the services most requested by customers?
 
