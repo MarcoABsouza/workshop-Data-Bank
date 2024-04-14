@@ -1,6 +1,6 @@
 # Database for Workshop
 
-This project consists of creating a database for an e-commerce system using MySQL. The database is designed to store information about customers, vehicles, services, service orders
+This project consists of creating a database for an workshop system using MySQL. The database is designed to store information about customers, vehicles, services, service orders
 ,materials,employees as well as managing the relationship between these entities.
 
 ## Model Database ER
